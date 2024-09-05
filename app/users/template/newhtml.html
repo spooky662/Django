@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <p>Registro de usuários</p>
+    <form action= "{% url 'users' %}" method = 'POST'>
+        {% csrf_token %}
+        Nome: <input type="text" name='nome'> <br>
+        Telefone: <input type="number" name='telefone'> <br>
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
